@@ -1,0 +1,35 @@
+# Task: Create a password generator
+
+import string
+import random
+
+l1 = list(string.ascii_lowercase)
+l2 = list(string.ascii_uppercase)
+l3 = list(string.punctuation)
+l4 = list(string.digits)
+
+chars = int(input("How many characters would you like your password to have?\n"))
+if(chars < 8):
+    chars = int(input("Enter a number 8 or greater.\n"))
+
+random.shuffle(l1)
+random.shuffle(l2)
+random.shuffle(l3)
+random.shuffle(l4)
+
+one = round(chars * 30/100)
+two = round(chars * 20/100)
+a = []
+
+for i in range(one):
+    a.append(l1[i])
+    a.append(l2[i])
+
+for i in range(two):
+    a.append(l3[i])
+    a.append(l4[i])
+
+random.shuffle(a)
+
+pW = "".join(a)
+print("Your generated password is: ", pW)
