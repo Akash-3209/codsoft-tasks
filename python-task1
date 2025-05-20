@@ -1,0 +1,24 @@
+# Task: Create a simple calculator using Python.
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+while(1):
+        print("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Exit\n")
+        choice = int(input("Enter your choice: "))
+        if(choice == 1):
+                print(a + b)
+                print("\n")
+        elif(choice == 2):
+                print(a - b)
+                print("\n")
+        elif(choice == 3):
+                print(a * b)
+                print("\n")
+        elif(choice == 4):
+                if(b == 0):
+                        print("Undefined...")
+                else:
+                        print(a / b)
+        else:
+            exit(0)
