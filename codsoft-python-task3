@@ -1,0 +1,31 @@
+# Task: Create a Rock-Paper-Scissors game between the user and the computer.
+
+import random
+
+print("ROCK PAPER SCISSORS\n\n")
+print("The rules of the game are:")
+print("Rock beats Scissors")
+print("Scissors beats Paper")
+print("Paper beats Rock")
+
+while(1):
+  print("1. Rock\n2. Paper\n3. Scissors\n")
+  choice = int(input("Enter your choice: "))
+  if choice == 1:
+      choiceName = "Rock"
+  elif choice == 2:
+      choiceName = "Paper"
+  else:
+      choiceName = "Scissors"
+
+  print("Your choice: ", choiceName)
+  print("Computer's turn to choose...\n\n")
+  compCh = random.randint(1, 3)
+  if(compCh == 1):
+    compChName = "Rock"
+  elif(compCh == 2):
+    compChName = "Paper"
+  else:
+    compChName = "Scissors"
+
+  print("Computer's choice: ", compChName)
