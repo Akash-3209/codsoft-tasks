@@ -29,3 +29,25 @@ while(1):
     compChName = "Scissors"
 
   print("Computer's choice: ", compChName)
+
+  if choice == compCh:
+    gameRes = "Draw"
+  elif((choice == 1 and compCh == 2) or (choice == 2 and compCh == 1)):
+    gameRes = "Paper beats Rock"
+  elif((choice == 2 and compCh == 3) or (choice == 3 and compCh == 2)):
+    gameRes = "Scissors beats Paper"
+  elif((choice == 3 and compCh == 1) or (choice == 3 and compCh == 1)):
+    gameRes = "Rock beats Scissors"
+
+  if gameRes = "Draw":
+    print("\nIt's a tie...")
+  elif gameRes == choice:
+    print("\nUser wins!")
+  else:
+    print("\nComputer wins!")
+
+  onceMore = input("Want to play again? Press Y or N.")
+  if (onceMore == 'N') or (onceMore == 'n'):
+    break
+
+print("Thanks for playing!")
